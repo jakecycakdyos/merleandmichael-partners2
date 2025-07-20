@@ -40,7 +40,7 @@ section h2 {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  align-items: stretch; /* match heights */
+  align-items: flex-start; /* only the clicked card will grow */
 }
 
 .partner {
@@ -71,7 +71,7 @@ section h2 {
 }
 
 .partner img {
-  /* fallback if any <img> remains unwrapped */
+  /* fallback if any image isn't wrapped */
   max-width: 100%;
   height: auto;
 }
