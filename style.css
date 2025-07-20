@@ -1,3 +1,4 @@
+/* style.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -39,11 +40,11 @@ section h2 {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  align-items: stretch; /* ensures all cards in a row match the tallest */
+  align-items: stretch; /* match heights */
 }
 
 .partner {
-  display: flex;           /* stack contents vertically */
+  display: flex;
   flex-direction: column;
   background-color: #fff;
   border: 1px solid #eee;
@@ -56,11 +57,23 @@ section h2 {
   position: relative;
 }
 
-.partner img {
-  max-height: 80px;        /* uniform logo height */
-  width: auto;
-  object-fit: contain;
+.logo-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+}
+
+.logo-container img {
+  max-height: 100%;
+  width: auto;
+}
+
+.partner img {
+  /* fallback if any <img> remains unwrapped */
+  max-width: 100%;
+  height: auto;
 }
 
 .partner p {
