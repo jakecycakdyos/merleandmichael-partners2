@@ -39,11 +39,11 @@ section h2 {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  align-items: stretch;   /* ← ensures all cards in a row match the tallest */
+  align-items: stretch; /* ensures all cards in a row match the tallest */
 }
 
 .partner {
-  display: flex;          /* ← stack contents vertically */
+  display: flex;           /* stack contents vertically */
   flex-direction: column;
   background-color: #fff;
   border: 1px solid #eee;
@@ -57,8 +57,9 @@ section h2 {
 }
 
 .partner img {
-  max-width: 100%;
-  height: auto;
+  max-height: 80px;        /* uniform logo height */
+  width: auto;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 
